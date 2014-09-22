@@ -8,10 +8,10 @@
 	"buffers":
 	[
 		{
-			"file": "link_node_module.sh",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 26,
+				"buffer_size": 605,
 				"line_ending": "Unix"
 			}
 		}
@@ -48,7 +48,8 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/Akira/Project/20140902node.webkit.threeJS.sandbox/github/NNYFrameworks/apps/myApps/emptyExample"
+		"/Users/Akira/Project/20140902node.webkit.threeJS.sandbox/github/NNYFrameworks/apps/myApps/emptyExample",
+		"/Users/Akira/Project/20140902node.webkit.threeJS.sandbox/github/NNYFrameworks/apps/myApps/emptyExample/src"
 	],
 	"file_history":
 	[
@@ -215,24 +216,26 @@
 			[
 				{
 					"buffer": 0,
-					"file": "link_node_module.sh",
+					"file": "index.html",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 26,
+						"buffer_size": 605,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								355,
+								304
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

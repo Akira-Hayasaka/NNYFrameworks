@@ -1,0 +1,9 @@
+{
+  "name": "NNYFrameworks",
+  "version": "0.0.0",
+  "description": "",
+  "dependencies": {
+    "jquery": "^2.1.1",
+    "three": "^0.68.0"
+  }
+}
