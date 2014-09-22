@@ -1,2 +1,2 @@
-var $ = require('jquery');
+var $ = require('jquery-browserify');
 var THREE = require('three');

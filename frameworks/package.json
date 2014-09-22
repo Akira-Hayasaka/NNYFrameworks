@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "description": "",
   "dependencies": {
-    "jquery": "^2.1.1",
+    "browserify": "^5.12.0",
+    "jquery-browserify": "^1.8.1",
     "three": "^0.68.0"
   }
 }

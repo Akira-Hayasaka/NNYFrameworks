@@ -37,4 +37,4 @@ App.prototype.draw = function()
     this.renderer.render(this.scene, this.camera);
 }
 
-module.exports = App;
+// module.exports = App;
