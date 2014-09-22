@@ -44,8 +44,8 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(2);
-	__webpack_require__(1);
+	var $ = __webpack_require__(2);
+	var THREE = __webpack_require__(1);
 
 
 /***/ },
