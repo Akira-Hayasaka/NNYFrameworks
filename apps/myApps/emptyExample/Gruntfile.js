@@ -1,5 +1,5 @@
 module.exports = function (grunt) {
-  grunt.file.expand('node_modules/grunt-*/tasks').forEach(grunt.loadTasks);
+  grunt.file.expand('../../../../node_modules/grunt-*/tasks').forEach(grunt.loadTasks);
 
   var webpack = require('webpack');
   var webpackConfig = require('./webpack.config.js');

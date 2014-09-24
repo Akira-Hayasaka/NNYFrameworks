@@ -4,8 +4,7 @@ var webpack = require('webpack');
 module.exports = {
   cache: true,
   entry: {
-    //nny: './app/nny'
-    nnyExample: './apps/myApp/nnyExample'
+    emptyExample: './src'
   },
   output: {
     path: path.join(__dirname, 'dist'),

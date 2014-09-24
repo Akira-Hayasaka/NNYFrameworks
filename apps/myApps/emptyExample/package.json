@@ -1,0 +1,22 @@
+{
+  "name": "emptyExample",
+  "main": "index.html",
+  "version": "0.0.1",
+  "private": true,
+  "window": {
+    "title": "emptyExample",
+    "toolbar": false,
+    "frame": true,
+    "width": 1280,
+    "height": 600,
+    "position": "mouse",
+    "min_width": 400,
+    "min_height": 200,
+    "max_width": 800,
+    "max_height": 600,
+    "moveTo": "100, 200"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {}
+}
