@@ -2,14 +2,26 @@ NNYFrameworks
 =============
 
 No Name Yet Frameworks
+
+Quick Start
 -
 
-root
+node.js<br>
+http://nodejs.org/
 
-$ npm install
+webpack module bundler<br>
+http://webpack.github.io/
 
-$ cd apps/myApps/emptyExample 
+rogerwang/node-webkit<br>
+https://github.com/rogerwang/node-webkit
 
-$ webpack
+Install:
+<pre>$ cd /path/to/</pre>
+<pre>$ npm install</pre>
 
-$ nodewebkit
+Bundle:
+<pre>$ cd apps/myApps/emptyExample</pre> 
+<pre>$ webpack --watch</pre>
+
+Run:
+<pre>$ nodewebkit</pre>
