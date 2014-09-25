@@ -2,10 +2,9 @@
   "name": "emptyExample",
   "main": "index.html",
   "version": "0.0.1",
-  "private": true,
   "window": {
     "title": "emptyExample",
-    "toolbar": false,
+    "toolbar": true,
     "frame": true,
     "width": 1280,
     "height": 600,

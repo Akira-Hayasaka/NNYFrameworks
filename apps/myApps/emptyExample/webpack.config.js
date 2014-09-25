@@ -3,9 +3,7 @@ var webpack = require('webpack');
 
 module.exports = {
   cache: true,
-  entry: {
-    emptyExample: './src'
-  },
+  entry: './src/App.js',
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: 'dist/',
@@ -24,10 +22,10 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-      // Automatically inject jQuery
-      // This is required by many jQuery plugins
-      jQuery: "jquery",
-      $: "jquery"
+      jQuery: "jquery", // jQuery
+      $: "jquery",  // jQuery
+      THREE: "three", // three.js
+      dat: "dat-gui"  // dat.gui
     })
   ]
 };

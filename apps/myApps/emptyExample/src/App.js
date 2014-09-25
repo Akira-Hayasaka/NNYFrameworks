@@ -1,8 +1,5 @@
 require('../../../../frameworks/style.css');
 require(['../../../../frameworks/core.js'], function (APP) {
-	var THREE = APP.THREE;
-	var dat = APP.dat;
-
 	// Variable
 	var container, camera, scene, renderer;
 	var keyboard;
