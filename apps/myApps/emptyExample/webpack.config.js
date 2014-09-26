@@ -25,7 +25,8 @@ module.exports = {
       jQuery: "jquery", // jQuery
       $: "jquery",  // jQuery
       THREE: "three", // three.js
-      dat: "dat-gui"  // dat.gui
+      dat: "dat-gui"//,  // dat.gui
+      // VideoPlayer: "video-player"  // dat.gui
     })
   ]
 };
