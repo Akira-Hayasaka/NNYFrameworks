@@ -63,19 +63,23 @@ VideoPlayer.prototype.test = function()
 
 VideoPlayer.prototype.loadMovie = function(path)
 {
+    this.video = window.document.createElement('video');
+    window.document.body.appendChild(this.video);
+    this.video.preload = "none";
+    this.video.src = path;
+    this.video.load();
+    this.video.play();
+    this.video.autoplay = true;
+
     this.container = window.document.createElement('div');
     window.document.body.appendChild(this.container);
 
-    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    this.camera.position.x = 0;
-    this.camera.position.y = 0;
-    this.camera.position.z = 1000;
+    this.camera = new THREE.OrthographicCamera(-window.innerWidth/2, window.innerWidth/2,
+                                                window.innerHeight/2, -window.innerHeight/2,
+                                                1, 10000);
+    this.camera.position.set(0, 0, 1);
 
     this.scene = new THREE.Scene();
-
-    this.video = window.document.createElement('video');
-    this.video.src = path;
-    this.video.autoplay = true;
 
     this.image = window.document.createElement('canvas');
     this.image.width = 480;
@@ -107,6 +111,10 @@ VideoPlayer.prototype.update = function()
         this.imageContext.drawImage(this.video, 0, 0);
         if (this.texture)
             this.texture.needsUpdate = true;
+    }
+    else
+    {
+        console.log('no enough data');
     }
 };
 
