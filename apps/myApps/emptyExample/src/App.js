@@ -11,9 +11,12 @@ require(['../../../../frameworks/core.js'], function (APP) {
 
 	// setup
 	setup();
-	
+
 	// draw
 	draw();
+
+	var vidPlayer = new VideoPlayer();
+	vidPlayer.test();
 
 	/* ------------------------------------
 		setup
@@ -59,13 +62,13 @@ require(['../../../../frameworks/core.js'], function (APP) {
 		renderer.setSize( W, H );
 		// enable shadows on the renderer
 		renderer.shadowMapEnabled = true;
-		
+
 		// scene
 		scene = new THREE.Scene();
 
 		// camera
 		resetCamera();
-		
+
 		// Container
 		container = document.getElementById( 'threeJs' );
 		container.appendChild( renderer.domElement );
