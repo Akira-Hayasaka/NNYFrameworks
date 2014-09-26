@@ -9,14 +9,16 @@ require(['../../../../frameworks/core.js'], function (APP) {
 	// GUI
 	var params = { speed: 70 };
 
+	var vidPlayer = new VideoPlayer();
+	vidPlayer.test();
+
 	// setup
 	setup();
 
 	// draw
 	draw();
 
-	var vidPlayer = new VideoPlayer();
-	vidPlayer.test();
+
 
 	/* ------------------------------------
 		setup
@@ -31,6 +33,8 @@ require(['../../../../frameworks/core.js'], function (APP) {
 		material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading});
 		mesh = new THREE.Mesh(geometry, material);
 		scene.add(mesh);
+
+		vidPlayer.loadMovie("./bin/data/movies/sintel.mp4");
 	}
 
 	/* ------------------------------------
@@ -47,6 +51,9 @@ require(['../../../../frameworks/core.js'], function (APP) {
 		// rendering & updating
 		requestAnimationFrame( draw );
 		renderer.render( scene, camera );
+
+		vidPlayer.update();
+		vidPlayer.draw();
 	}
 
 	/* ------------------------------------

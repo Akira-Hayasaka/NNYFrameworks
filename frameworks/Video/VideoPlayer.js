@@ -46,7 +46,14 @@
 
 function VideoPlayer()
 {
-
+    var camera;
+    var scene;
+    var video;
+    var image;
+    var imageContext;
+    var texture;
+    var mesh;
+    var renderer;
 }
 
 VideoPlayer.prototype.test = function()
@@ -54,5 +61,61 @@ VideoPlayer.prototype.test = function()
     console.log("hello VideoPlayer");
 };
 
+VideoPlayer.prototype.loadMovie = function(path)
+{
+    this.container = window.document.createElement('div');
+    window.document.body.appendChild(this.container);
+
+    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    this.camera.position.x = 0;
+    this.camera.position.y = 0;
+    this.camera.position.z = 1000;
+
+    this.scene = new THREE.Scene();
+
+    this.video = window.document.createElement('video');
+    this.video.src = path;
+    this.video.autoplay = true;
+
+    this.image = window.document.createElement('canvas');
+    this.image.width = 480;
+    this.image.height = 204;
+
+    this.imageContext = this.image.getContext('2d');
+    this.imageContext.fillStyle = '#000000';
+    this.imageContext.fillRect( 0, 0, 480, 204 );
+
+    this.texture = new THREE.Texture(this.image);
+    this.texture.minFilter = THREE.LinearFilter;
+    this.texture.magFilter = THREE.LinearFilter;
+
+    var material = new THREE.MeshBasicMaterial({map: this.texture, overdraw: 0.5});
+    var plane = new THREE.PlaneGeometry(480, 204, 4, 4);
+    this.mesh = new THREE.Mesh(plane, material);
+    this.scene.add(this.mesh);
+
+    this.renderer = new THREE.CanvasRenderer();
+    this.renderer.setClearColor(0xf0f0f0);
+    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.container.appendChild(this.renderer.domElement);
+};
+
+VideoPlayer.prototype.update = function()
+{
+    if (this.video.readyState === this.video.HAVE_ENOUGH_DATA)
+    {
+        this.imageContext.drawImage(this.video, 0, 0);
+        if (this.texture)
+            this.texture.needsUpdate = true;
+    }
+};
+
+VideoPlayer.prototype.draw = function()
+{
+    this.renderer.render(this.scene, this.camera);
+};
 
 module.exports = VideoPlayer;
+
+
+
