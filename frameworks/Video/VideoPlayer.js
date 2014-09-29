@@ -65,6 +65,7 @@ VideoPlayer.prototype.loadMovie = function(path)
 {
     this.video = window.document.createElement('video');
     window.document.body.appendChild(this.video);
+    this.video.style.display = 'none';
     this.video.preload = "none";
     this.video.src = path;
     this.video.load();
