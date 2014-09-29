@@ -68,6 +68,7 @@ VideoPlayer.prototype.loadMovie = function(path)
     this.video.style.display = 'none';
     this.video.preload = "none";
     this.video.src = path;
+    this.video.type = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
     this.video.load();
     this.video.play();
     this.video.autoplay = true;
@@ -115,7 +116,7 @@ VideoPlayer.prototype.update = function()
     }
     else
     {
-        console.log('no enough data');
+        console.log('this.video.readyState = ' + this.video.readyState);
     }
 };
 
