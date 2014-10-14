@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>OSCVDMXExample</title>
+<meta charset="utf-8" />
+<link href="../../../frameworks/style.css" media="all" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="threeJs"></div>
+<script src="./src/app.js"></script>
+<script type="text/javascript">
+	// require conflict
+	// https://github.com/rogerwang/node-webkit/wiki/faq-name-conflict
+    window.requireNode = window.require;
+    window.require = undefined; 
+</script>
+<script data-main="./main" src="../../../node_modules/requirejs/require.js"></script>
+</body>
+</html>
