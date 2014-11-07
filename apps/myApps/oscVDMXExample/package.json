@@ -1,9 +1,9 @@
 {
-  "name": "emptyExample",
+  "name": "oscVDMXExample",
   "main": "index.html",
   "version": "0.0.1",
   "window": {
-    "title": "emptyExample",
+    "title": "oscVDMXExample",
     "toolbar": false,
     "frame": false,
     "width": 1280,
