@@ -16,8 +16,12 @@ Install:
 <pre>$ cd /path/to/</pre>
 <pre>$ npm install</pre>
 
+Concat Libraly files: to: build/nny.js
+<pre>$ grunt</pre>
+
 Bundle:
 <pre>$ cd apps/myApps/oscVDMXExample</pre> 
 
 Run:
+<pre>$ grunt</pre>
 <pre>$ nodewebkit</pre>
